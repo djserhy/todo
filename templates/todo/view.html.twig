@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="panel-default panel">
+    <a href="{{ path('todo') }}">Go back</a>
+
+</div>
+<ul class="list-group">
+    <li class="list-group-item active">#{{ todo.id }}: {{ todo.name }}</li>
+    <li class="list-group-item">{{ todo.category }}</li>
+    <li class="list-group-item">{{ todo.description }}</li>
+    <li class="list-group-item">{{ todo.dueDate }}</li>
+    <li class="list-group-item">{{ todo.createDate| date('d-m-y') }}</li>
+</ul>
+{% endblock %}
